@@ -1,18 +1,40 @@
+@import "../../../scss/main.scss";
+@import "../../../scss/abstracts/mixins";
+
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  @include lg {
+    padding: 4em;
+  }
+
   &__heading {
-    font-weight: 400;
+    font-weight: 700;
+    color: $brand-color;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 1em;
   }
 
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
+    grid-gap: 0.5em;
+
+    @include md {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @include lg {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
   }
 }
