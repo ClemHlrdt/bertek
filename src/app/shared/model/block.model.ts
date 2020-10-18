@@ -1,5 +1,5 @@
-import { MemberCard } from './member-card.model';
+import { Card } from './card.model';
 
 export class Block {
-  constructor(public title: string, public members: MemberCard[]) {}
+  constructor(public title: string, public members: Card[]) {}
 }
