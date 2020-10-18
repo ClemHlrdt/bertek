@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Block } from 'src/app/shared/model/block.model';
-import { MemberCard } from 'src/app/shared/model/member-card.model';
+import { Card } from 'src/app/shared/model/card.model';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription[] = [];
   title: string;
-  memberCards: MemberCard[];
+  memberCards: Card[];
 
   ngOnInit(): void {
     const members = this.route.data.subscribe((res: { data: Block }) => {
