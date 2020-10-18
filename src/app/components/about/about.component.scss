@@ -13,21 +13,20 @@
   }
 
   &__heading {
-    font-weight: 700;
+    font-weight: 900;
+    letter-spacing: 0.8px;
     color: $brand-color;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 
   &__container {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 1100px;
     display: grid;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    grid-gap: 0.5em;
+    grid-gap: 1em;
 
     @include md {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
