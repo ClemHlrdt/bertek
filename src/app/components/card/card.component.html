@@ -1,14 +1,14 @@
 <article class="card">
   <img
     class="card__image"
-    [src]="member.images.w400"
-    [srcset]="srcSetImages"
-    alt=""
+    [src]="member.image.w400"
+    [srcset]="member.image.srcSet"
+    alt="profile photo of a team member"
   />
   <div class="card__container">
-    <h3 class="card__name">{{ member.info.title }}</h3>
-    <p class="card__role">{{ member.info.description }}</p>
-    <a class="card__email" href="">{{ member.info.link }}</a>
-    <p class="card__phone">{{ member.info.text }}</p>
+    <h3 class="card__name">{{ member.title }}</h3>
+    <p class="card__role">{{ member.description }}</p>
+    <a class="card__email" href="">{{ member.link }}</a>
+    <p class="card__phone">{{ member.text }}</p>
   </div>
 </article>
