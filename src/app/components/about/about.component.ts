@@ -10,11 +10,12 @@ import { Card } from 'src/app/shared/model/card.model';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit, OnDestroy {
-  constructor(private route: ActivatedRoute) {}
 
   private subscriptions: Subscription[] = [];
   title: string;
   memberCards: Card[];
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const members = this.route.data.subscribe((res: { data: Block }) => {
